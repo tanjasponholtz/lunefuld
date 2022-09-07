@@ -1,94 +1,48 @@
 # Installation (trin-for-trin)
 
-💡 **Sådan kommer du i gang med Tailwind CSS.**
-
-**_OBS!_** _Det er ikke meningen, at du skal vide alt om, hvad du skal i denne guide._
+💡 **Sådan kommer du i gang med lunefuld**
 
 ---
 
 **Trin:**
 
-1. Installer Node
-2. Download respository (to muligheder)
-3. Sæt projektet op
-4. Kør dev-server via terminalen
-5. Brug Tailwind
+Metode A:
+1. Download/klon alle filer fra Github repoet https://github.com/stefangrage/lunefuld.git, helt som du plejer 
+
+Metode B - med terminalen:
+1. Download alle filer fra Github
+2. Placer filerne et sted, der ikke synces med iCloud mm. og åbn projektet i VS Code
+3. Åbn Terminalen i VS Code og kør et par kodestumper
+4. Kør dev-server via Terminalen for at checke at det hele virker- og sluk igen:-)
+5. Git halløj 
+6. Byg videre på sitet:-)
 
 ---
 
-## 1. Installer Node
+#Metode B
 
-Først skal du downloade og installere **Node** via [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+## 1. Download alle filer fra Github
 
-Vælg enten _macOs_ eller _Windows_
-
-<details>
-    <summary>Se eksempel</summary>
-
-![Vælg enten `macOS` eller `Windows`](/README/download-node.webp)
-Vælg enten `macOS` eller `Windows`
-
-</details>
+Download filer fra: [https://github.com/stefangrage/lunefuld.git ]https://github.com/stefangrage/lunefuld.git )  
 
 ---
 
-## 2. Download respository
+## 2. Placer filerne et sted, der ikke synces med iCloud mm. og åbn projektet i VS Code
 
-<details>
-    <summary><h3>Mulighed A — via terminalen (anbefalet)</h3></summary>
-
-1. Opret og åben en ny mappe (projektnavn) i VS Code.
-2. Åbn terminalen via **View** (se evt. nedenfor)
-3. Kopier følgende kode ind i terminal-vinduet (husk at få det sidste punktum med!) og tryk _Enter_:
-   - Indtast "y" og tryk _Enter_, når der står `Ok to proceed? (y)`
-
-```
-npx degit https://github.com/daviatkea/tailwind-template-e2022.git .
-```
-
-💡 **OBS!** — Hvis du ser fejlen "destination directory is not empty, aborting" i terminalen kan du prøve med følgende kommando:
-
-```
-npx degit https://github.com/daviatkea/tailwind-template-e2022.git . --force
-```
-
-![SCR-20220119-lgw.png](/README/SCR-20220119-lgw.png)
-'View' -> 'Terminal'
-
-</details>
-
-<small>eller</small>
-
-<details>
-    <summary><h3>Mulighed B — via GitHub</h3></summary>
-
-1. Klik på "Use this template" (grøn knap)
-2. Giv dit projekt et navn
-3. Vælg "Public" efterfulgt af "Create repository from template".
-4. I dit nyoprettede repository kan du nu klone som normalt via VS Code.
-
-</details>
 
 ---
 
-## 3. Sæt projektet op
+## 3. Åbn Terminalen i VS Code og kør et par kodestumper
 
-Indtast følgende kode i terminal-vinduet og tryk _Enter_
+Åbn terminalen via **View** i VS Code, og kopier derefter følgende kode ind i terminal-vinduet og tryk _Enter_
 
 ```
 npm install
 ```
 
-<details>
-    <summary>Se eksempel</summary>
-
-![npm-i.jpg](/README/npm-i.jpg)
-
-</details>
-
 ---
 
-## 4. Kør dev-server via terminalen
+## 4. Kør dev-server via Terminalen - og sluk igen:-)
 
 Setuppet virker ikke med den traditionelle Live-Sever. Så derfor skal vi køre vores egen dev-server. Det gør du ved at kopiere følgende ind i terminal-vinduet efterfulgt af _Enter_
 
@@ -96,19 +50,51 @@ Setuppet virker ikke med den traditionelle Live-Sever. Så derfor skal vi køre 
 npm run dev
 ```
 
-### 4.1. Stop dev-serveren
+Check at alt ser ud som det skal - du skulle gerne kunne navigere rundt på sitet, og se nogen forskellige templates.
 
-Dev-serveren kører indtil du stopper den manuelt eller lukker VS Code. Du stopper dev-serveren ved at indtaste `ctrl+c` i terminal-vinduet.
+💡 **OBS!** — Nogle gange er det nødvendigt at stoppe serveren, hvilket gøres ved at indtaste `ctrl+c` i terminal-vinduet.
+Hvis du skal starte serveren igen, brug da `npm run dev` igen.
 
-💡 **OBS!** — Nogle gange er det nødvendigt at stoppe dev-serveren, hvis tingene ikke virker efter hensigten. Prøv da evt. at lukke dev-serveren og starte den op igen vha. `npm run dev`.
+Sluk terminalen igen med `ctrl+c`
 
 ---
 
-## 5. Brug Tailwind
+## 5. Git halløj
 
-Begynd at bruge Tailwinds hjælpeklasser til at style dit indhold. Find `index.html` i `/src`.
+Opret et repo på github. Kopier adressen dertil, og kør derefter følgende kommandoer via terminalen:
 
-Navigér derefter til [Tailwinds dokumentation](https://tailwindcss.com/docs/), for at se alle hjælpeklasser samt øvrige opsætningsmuligheder.
+```
+    Git init 
+```
+Det initialiserer dit git repo i din mappe
 
-![Untitled](/README/Untitled.png)
-# lunefuld
+
+```
+    git add --all
+    git commit -m “beskrivelse af dit commit”
+    git branch -M main
+```
+Her klargør du dit første commit - skift teksten "beskrivelse af dit commit ud med din egen tekst"
+
+
+```
+     git remote add origin https://github.com/ditbrugernavn/lunefuldlykke.git
+```
+Skift https://github.com/ditbrugernavn/lunefuldlykke.git ud med navnet på dit repo - så får du forbundet det hele korrekt
+
+
+```
+     git push -u origin main
+```
+Her pusher du dit nye projekt til dit tomme repo
+
+Check at alt fungerer som det skal på github 
+
+Derefter kan du pushe og pulle til git som normalt:-)
+
+Begynd at bruge Tailwinds hjælpeklasser til at style dit indhold. Find `index.html` under mappen `src`.
+
+
+## 6. Byg videre på sitet
+
+Herefter kan du bare arbejde løs på sitet - med eller uden tailwind, alt efter hvad du foretrækker.
